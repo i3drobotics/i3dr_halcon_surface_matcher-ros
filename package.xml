@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>halcon-match</name>
+  <version>0.0.1</version>
+  <description>
+    A ROS driver for Halcon's object matching
+  </description>
+
+  <maintainer email="jveitch@i3drobotics.com">Josh Veitch-Michaelis</maintainer>
+  <author email="jveitch@i3drobotics.com">Josh Veitch-Michaelis</author>
+  
+  <license>MIT</license>
+
+  <url type="website">http://i3drobotics.com/</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>nodelet</depend>
+  <depend>sensor_msgs</depend>
+  <depend>asr_halcon_bridge</depend>
+
+  <test_depend>rosunit</test_depend>
+  
+</package>
