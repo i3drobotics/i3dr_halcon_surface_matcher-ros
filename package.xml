@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
 
-  <name>halcon-match</name>
+  <name>halcon_match</name>
   <version>0.0.1</version>
   <description>
     A ROS driver for Halcon's object matching

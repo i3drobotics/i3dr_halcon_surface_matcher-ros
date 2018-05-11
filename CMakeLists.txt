@@ -1,8 +1,8 @@
-project(halcon-match)
+project(halcon_match)
 
 set (CMAKE_CXX_STANDARD 11)
 
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs genmsg)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy tf std_msgs genmsg)
 find_package(asr_halcon_bridge REQUIRED)
 
 include(GNUInstallDirs)
