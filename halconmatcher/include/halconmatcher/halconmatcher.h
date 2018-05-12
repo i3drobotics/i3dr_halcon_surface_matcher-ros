@@ -16,6 +16,7 @@ class HalconMatcher{
         void init_model(std::string filename, float sampling_distance=0.03, std::string units="mm");
         void match();
         void match_vanilla();
+        void cleanup();
 
         std::vector<found_object> objects;
 

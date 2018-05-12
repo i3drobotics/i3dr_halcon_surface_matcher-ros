@@ -80,6 +80,7 @@ void pointcloud_callback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
     pub.publish(object);
     poses.publish(object.pose);
   }
+
 }
 
 int main(int argc, char* argv[]){

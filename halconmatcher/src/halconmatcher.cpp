@@ -105,8 +105,10 @@ void HalconMatcher::match(){
   objects.clear();
 
   // Really figure out why this doesn't work in memory...
-  scene.WriteObjectModel3d("ply", "/home/htp/output.ply", HTuple(), HTuple());
-  load_scene("/home/htp/output.ply", "m");
+  //scene.WriteObjectModel3d("ply", "/home/htp/output.ply", HTuple(), HTuple());
+  //load_scene("/home/htp/output.ply", "m");
+
+  ROS_INFO("Scene contains %lu points.", (long) scene.GetObjectModel3dParams("num_points"));
 
   try{
     scene = scene.SelectPointsObjectModel3d("point_coord_z", 0.2, 1.5);
@@ -140,6 +142,11 @@ void HalconMatcher::match(){
   }catch(HOperatorException &e){
     ROS_ERROR("Distance threshold: %s", e.ErrorMessage().Text());
     ROS_ERROR("Possibly no plane was detected in the point cloud");
+    return;
+  }
+
+  if((long int) thresholded.GetObjectModel3dParams("num_points") == 0){
+    ROS_WARN("Scene empty after thresholding");
     return;
   }
 
