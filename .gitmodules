@@ -1,0 +1,3 @@
+[submodule "halcon_surface_matcher"]
+	path = halcon_surface_matcher
+	url = https://github.com/i3drobotics/halcon_surface_matcher.git
