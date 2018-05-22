@@ -36,8 +36,11 @@
     </group>
 
     <node pkg="halcon_match" type="matcher" name="halcon_matcher" output="screen" >
-            <param name="reference_model" value="$(find halcon_match)halconmatcher/test/reference_model.stl" />
-            <remap from="/halcon_matcher/points2" to="/stereo/points2" />
+        <param name="reference_model" value="$(find halcon_match)models/aluminium_tube.stl" />
+        <remap from="/halcon_matcher/points2" to="/stereo/points2" />
+        <param name="mesh_resource" value="$(find halcon_match)models/aluminium_tube.dae" />
+        <param name="confidence_threshold" value="0.2" />
+        <param name="object_key" value="serfow_cylinder" />
     </node>
 
 </launch>

@@ -12,5 +12,4 @@ find_package(GTest REQUIRED)
 
 catkin_package()
 
-add_subdirectory(halconmatcher)
 add_subdirectory(src)
