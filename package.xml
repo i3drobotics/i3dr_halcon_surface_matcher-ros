@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package format="2">
 
-  <name>halcon_match</name>
+  <name>i3dr_halcon_surface_matcher</name>
   <version>0.0.1</version>
   <description>
-    A ROS driver for Halcon's object matching
+    A ROS driver for Halcon's surface matching
   </description>
 
-  <maintainer email="jveitch@i3drobotics.com">Josh Veitch-Michaelis</maintainer>
-  <author email="jveitch@i3drobotics.com">Josh Veitch-Michaelis</author>
+  <maintainer email="bknight@i3drobotics.com">Ben Knight</maintainer>
+  <author email="bknight@i3drobotics.com">Ben Knight</author>
   
   <license>MIT</license>
 

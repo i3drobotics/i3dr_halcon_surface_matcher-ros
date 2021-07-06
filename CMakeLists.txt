@@ -1,4 +1,4 @@
-project(halcon_match)
+project(i3dr_halcon_surface_matcher)
 
 set (CMAKE_CXX_STANDARD 11)
 
@@ -51,19 +51,19 @@ target_link_libraries(
     ${Halcon_LIBRARIES}
 )
 
-add_executable(matcher src/match_node.cpp)
+add_executable(match_surface src/match_node.cpp)
 
 target_link_libraries(
-    matcher
+    match_surface
     halcon_surface_match
 	${catkin_LIBRARIES}
 	${asr_halcon_bridge_LIBRARIES}
 )
 
 # Tests
-catkin_add_gtest(match_tests test/test_match.cpp)
-if(TARGET match_tests)
-    target_link_libraries(match_tests 
+catkin_add_gtest(match_surface_tests test/test_match.cpp)
+if(TARGET match_surface_tests)
+    target_link_libraries(match_surface_tests 
         halcon_surface_match
         ${catkin_LIBRARIES}
         ${asr_halcon_bridge_LIBRARIES}
