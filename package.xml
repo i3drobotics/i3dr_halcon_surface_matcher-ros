@@ -18,6 +18,8 @@
   <depend>roscpp</depend>
   <depend>nodelet</depend>
   <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>object_recognition_msgs</depend>
   <depend>asr_halcon_bridge</depend>
 
   <test_depend>rosunit</test_depend>

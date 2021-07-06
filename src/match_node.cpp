@@ -8,7 +8,7 @@
 #include <tf/transform_broadcaster.h>
 #include <visualization_msgs/Marker.h>
 
-#include <halcon_surface_matcher/halcon_surface_matcher.h>
+#include <halconmatcher/halconmatcher.h>
 
 std::unique_ptr<HalconMatcher> matcher;
 ros::Publisher pub;
