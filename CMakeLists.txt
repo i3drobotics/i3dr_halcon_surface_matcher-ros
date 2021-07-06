@@ -61,12 +61,11 @@ target_link_libraries(
 )
 
 # Tests
-# add_executable(match_tests test/test_match.cpp)
-# target_link_libraries(
-#     match_tests
-#     halcon_surface_match
-# 	${catkin_LIBRARIES}
-# 	${asr_halcon_bridge_LIBRARIES}
-# )
-# target_include_directories(match_tests PUBLIC ${GTEST_INCLUDE_DIRS})
-# add_test(NAME halcon_matcher COMMAND match_tests)
+catkin_add_gtest(match_tests test/test_match.cpp)
+if(TARGET match_tests)
+    target_link_libraries(match_tests 
+        halcon_surface_match
+        ${catkin_LIBRARIES}
+        ${asr_halcon_bridge_LIBRARIES}
+    )
+endif()
