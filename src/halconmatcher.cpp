@@ -45,7 +45,7 @@ void HalconMatcher::init_model(std::string filename, float sampling_distance, st
        std::cout << "Error making surface model" << std::endl;
        ROS_ERROR("Error: %s", e.ErrorMessage().Text());
     }
-
+    ROS_INFO("Reference model loaded");
 }
 
 void HalconMatcher::match_vanilla(){

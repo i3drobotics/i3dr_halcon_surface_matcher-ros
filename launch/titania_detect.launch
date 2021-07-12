@@ -7,10 +7,10 @@
     <arg name="rviz" default="true" />
     <arg name="titania_ns" default="i3dr_titania" />
 
-    <node pkg="halcon_match" type="matcher" name="halcon_matcher" output="screen" >
-        <param name="reference_model" value="$(find halcon_match)/test/aluminium_tube.stl" />
-        <remap from="/halcon_matcher/points2" to="$(arg titania_ns)/points2" />
-        <param name="mesh_resource" value="$(find halcon_match)/test/aluminium_tube.dae" />
+    <node pkg="i3dr_halcon_surface_matcher" type="match_surface" name="i3dr_surface_match" output="screen" >
+        <param name="reference_model" value="$(find i3dr_halcon_surface_matcher)/test/aluminium_tube.stl" />
+        <remap from="/points2" to="$(arg titania_ns)/points2" />
+        <param name="mesh_resource" value="$(find i3dr_halcon_surface_matcher)/test/aluminium_tube.dae" />
         <param name="confidence_threshold" value="0.2" />
         <param name="object_key" value="serfow_cylinder" />
     </node>
@@ -18,6 +18,6 @@
     <!-- DISPLAY -->
     <!-- run rviz with config file -->
     <node if="$(arg rviz)" pkg="rviz" type="rviz" name="rivz" 
-        args="-d $(find halcon_match)/rviz/titania.rviz"/>
+        args="-d $(find i3dr_halcon_surface_matcher)/rviz/titania.rviz"/>
 
 </launch>

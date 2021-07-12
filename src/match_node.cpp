@@ -130,7 +130,7 @@ void pointcloud_callback(const sensor_msgs::PointCloud2ConstPtr& cloud_msg){
 
 int main(int argc, char* argv[]){
 
-  ros::init(argc, argv, "halcon_matcher");
+  ros::init(argc, argv, "match_surface");
   ros::NodeHandle nh("~");
 
   nh.param<double>("confidence_threshold", confidence_threshold, 0.15);
@@ -172,6 +172,8 @@ int main(int argc, char* argv[]){
     ROS_ERROR("No path to reference model.");
     exit(1);
   }
+
+  ROS_INFO("node closed");
 
   return 0;
 }
