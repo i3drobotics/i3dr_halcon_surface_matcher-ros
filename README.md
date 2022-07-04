@@ -26,7 +26,7 @@ wstool update -t src
 ```
 To use this package with I3DR's Titania stereo camera also add  the following rosinstall:
 ```
-wstool merge -t src https://raw.githubusercontent.com/i3drobotics/i3dr_titania-ros/master/install/i3dr_titania_https.rosinstall
+wstool merge -t src https://raw.githubusercontent.com/i3drobotics/i3dr_titania-ros/main/install/i3dr_titania_https.rosinstall
 wstool update -t src
 ```
 
@@ -51,7 +51,7 @@ In order to build the package, you need to configure rosdep (i.e. the ROS comman
 it knows how to resolve this dependency. This can be achieved by executing the following commands:
 
 ```
-sudo sh -c 'echo "yaml https://raw.githubusercontent.com/i3drobotics/pylon_camera/master/rosdep/pylon_sdk.yaml " > /etc/ros/rosdep/sources.list.d/15-plyon_camera.list'
+sudo sh -c 'echo "yaml https://raw.githubusercontent.com/i3drobotics/pylon_camera/main/rosdep/pylon_sdk.yaml " > /etc/ros/rosdep/sources.list.d/15-plyon_camera.list'
 rosdep update
 ```
 
